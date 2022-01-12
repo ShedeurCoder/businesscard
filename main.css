@@ -1,0 +1,22 @@
+body {
+    margin: 1%;
+}
+section {
+    border: black 1px solid;
+    margin: 1%;
+}
+input {
+    width: 60%;
+}
+label {
+    width: 30%;
+}
+.textAlign {
+    width: 20%;
+}
+div {
+    margin: 1%;
+}
+h1 {
+    text-align: center;
+}

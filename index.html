@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Business Card Designer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    
+    <h1><b>Business Card Designer</b></h1>
+
+    <form id="businessForm" class="well col-xs-12 col-md-6">
+        <div>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" placeholder="i.e. ChickenComputers" onkeyup="changeCompany()" class="form-control">
+        </div>
+        <div>
+            <label for="companySlogan">Company Slogan:</label>
+            <input type="text" id="companySlogan" placeholder="i.e. We can do it!" onkeyup="changeSlogan()" class="form-control">
+        </div>
+        <div>
+            <label for="BGC">Background Colour:</label>
+            <input type="color" id="BackgroundColor" onchange="changeBG()">
+        </div>
+        <div>
+            <label for="FC">Font Colour:</label>
+            <input type="color" id="FC" onchange="changeColor()">
+        </div>
+        <div>
+            <label for="textAlign">Text Align:</label>
+            <input type="button" value="Left" class="btn btn-info textAlign" onclick="leftAlign()">
+            <input type="button" value="Center" class="btn btn-info textAlign" onclick="centerAlign()">
+            <input type="button" value="Right" class="btn btn-info textAlign" onclick="rightAlign()">
+        </div>
+        <div>
+            <label for="yourName">Your Name:</label>
+            <input type="text" id="yourName" placeholder="i.e. John Hancock" onkeyup="changeName()" class="form-control">
+        </div>
+        <div>
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" placeholder="i.e. Central Manager" onkeyup="changeJob()" class="form-control">
+        </div>
+        <div>
+            <label for="emailAd">Email:</label>
+            <input type="email" id="emailAd" placeholder="i.e. person@company.com" onkeyup="changeEmail()" class="form-control">
+        </div>
+        <div>
+            <label for="Number">Number:</label>
+            <input type="tel" id="Number" placeholder="i.e. +1 (758) 919 - 8178" onkeyup="changeTel()" class="form-control">
+        </div>
+        <div>
+            <label for="address">Address: </label>
+            <input type="text" id="address" placeholder="i.e. 123 South Example St. Cool City FL 12345" onkeyup="changeAd()" class="form-control">
+        </div>
+        <button onclick="window.location.reload()" type="button">Clear</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <section id="card" class="col-xs-10 col-md-5">
+        <div>
+            <h3 id="companyNameDisplay">Company Name</h3>
+            <h4 id="companySloganDisplay">Company Slogan</h4>
+        </div>
+        <div>
+            <p id="yourNameDisplay">Name</p>
+            <p id="jobTitleDisplay">Job Title</p>
+            <p id="emailAdDisplay">Email: </p>
+            <p id="NumberDisplay">Tel: </p>
+            <p id="addressDisplay">Address:</p>
+        </div>
+    </section>
+
+<script src='main.js'></script>
+</body>
+</html>
